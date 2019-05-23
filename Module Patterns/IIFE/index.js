@@ -12,10 +12,6 @@ console.log("Global:", str);
   console.log("IIFE");
 })();
 
-// (function() {
-//   console.log("Same IIFE");
-// }());
-
 // Name IIFE
 (function nameIIFE() {
   console.log("Named IIFE");
