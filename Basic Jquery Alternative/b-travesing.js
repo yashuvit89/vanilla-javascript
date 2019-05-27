@@ -15,3 +15,17 @@ if (!Element.prototype.matches) {
       return i > - 1;
   };
 }
+
+
+// B parent node
+// parent node
+var el = document.querySelector("span");
+var parent = el.parentNode;
+
+
+// C siblings
+// Get siblings of an element
+var el = document.querySelector("li.mid");
+el.previousElementSibling
+el.nextElementSibling
+
