@@ -1,7 +1,3 @@
-var links = new MyPlugin("a");
-
-links.addClass("hover");
-
 var MyPlugin = (function() {
   "use strict";
 
@@ -22,3 +18,7 @@ var MyPlugin = (function() {
 
   return Constructor;
 })();
+
+var links = new MyPlugin("a");
+
+links.addClass("hover");
