@@ -1,0 +1,28 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+#tabs {
+  list-style: none;
+  border: 1px solid #efefef;
+  width: 700px;
+}
+
+.tabItem {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.tabContentItem {
+  list-style: none;
+  border: 1px solid #efefef;
+  display: none;
+}
+
+.tabContentItem.selected {
+  display: block;
+  height: 200px;
+  width: 700px;
+}
