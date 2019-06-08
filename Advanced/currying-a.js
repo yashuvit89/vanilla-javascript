@@ -1,3 +1,5 @@
+// https://theanubhav.com/2019/02/03/js-currying-in-interview/ - better implementation
+
 function add(a, b, c) {
   return a + b + c;
 }
