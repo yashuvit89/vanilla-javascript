@@ -5,6 +5,7 @@ window.onload = function() {
 
 var APP = (function() {
   var _listItems = [];
+  var counter = 0;
 
   function _init() {
     // register form submit event
@@ -22,7 +23,8 @@ var APP = (function() {
     if (desc === "") {
       return;
     }
-    var newItem = new ListItem(desc);
+    counter++;
+    var newItem = new ListItem(desc, counter);
     _listItems.unshift(newItem);
 
     // append item
@@ -31,15 +33,29 @@ var APP = (function() {
 
   function _appendItemToList(item) {
     var ele = document.createElement("li");
-    var elClass = "itemList" + item.state;
-    ele.classList.add(elClass);
-    ele.innerHTML = item.desc;
-    // document.getElementById("list").appendChild(ele);
     var parentNode = document.getElementById("list");
+
+    ele.classList.add("itemList", item.state);
+    ele.innerHTML = item.desc;
+
     parentNode.insertBefore(ele, parentNode.firstChild);
+
+    // eventlistener
+    ele.addEventListener("click", _markComplete.bind(this, item));
   }
 
-  function _markComplete() {}
+  function _markComplete(item, e) {
+    var target = e.target;
+    if (item.state === "ACTIVE") {
+      item.setState("COMPLETED");
+      target.classList.remove("active");
+      target.classList.add("completed");
+    } else {
+      item.setState("ACTIVE");
+      target.classList.remove("completed");
+      target.classList.add("active");
+    }
+  }
 
   function _displayItems() {
     var list = document.getElementById("list");
@@ -54,14 +70,12 @@ var APP = (function() {
   };
 })();
 
-function ListItem(desc) {
-  counter = 1;
+function ListItem(desc, id) {
+  this.id = id;
   this.desc = desc;
   this.state = "ACTIVE";
 
   this.setState = function(state) {
     this.state = state;
-    console.log("Counter", counter);
-    counter++;
   };
 }
