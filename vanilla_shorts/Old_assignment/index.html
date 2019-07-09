@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <form id="tabForm">
+      <ul class="tabs">
+        <li data-id="days-of-the-week" class="tabItem">days-of-the-week</li>
+        <li data-id="date-picker" class="tabItem">date-picker</li>
+        <li data-id="user-input" class="tabItem">user-input</li>
+      </ul>
+      <div class="tabContent selected" id="days-of-the-week">
+        <input name="weekday" type="checkbox" value="MON" /> Monday
+        <input name="weekday" type="checkbox" value="TUE" /> Tuesday
+        <input name="weekday" type="checkbox" value="WED" /> Wednesday
+        <input name="weekday" type="checkbox" value="THU" /> Thursday
+        <input name="weekday" type="checkbox" value="FRI" /> Friday
+        <input name="weekday" type="checkbox" value="SAT" /> Saturday
+        <input name="weekday" type="checkbox" value="SUN" /> Sunday
+      </div>
+
+      <div class="tabContent" id="date-picker">
+        <input type="hidden" value="" id="date" />
+        <select id="day">
+          <!--                     <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>...</option>
+                      <option>31</option> -->
+        </select>
+        <select id="month">
+          <!-- <option>...</option> -->
+        </select>
+        <select id="year">
+          <!-- <option>-10..+10</option> -->
+        </select>
+      </div>
+
+      <div class="tabContent" id="user-input">
+        <!-- parse it to fields above -->
+        <input type="text" value="" id="input" />
+      </div>
+
+      <input type="submit" value="Run" id="submit" />
+
+      <!-- final format: MON,TUE,FRI or 05/12/2011 -->
+      <input
+        id="result"
+        type="text"
+        value=""
+        id="result"
+        placeholder="Result"
+      />
+    </form>
+  </body>
+</html>
