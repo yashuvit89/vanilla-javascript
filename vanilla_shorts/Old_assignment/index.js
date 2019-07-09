@@ -59,7 +59,7 @@ class App {
   }
 
   submitForm(e) {
-    console.log("Submit", e);
+    console.log("Submit");
     e.preventDefault();
 
     var resultEl = document.querySelector("#result");

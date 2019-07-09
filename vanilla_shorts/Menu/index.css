@@ -1,0 +1,43 @@
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: yellow;
+}
+
+a.active {
+  background-color: aquamarine;
+}
+
+.icon-bar {
+  border: 1px solid grey;
+  display: flex;
+  background: beige;
+}
+
+.icon-bar.horizontal {
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.icon-bar.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  width: 50px;
+}
+
+.icon-bar .fa {
+  font-size: 48px;
+  color: blue;
+}
+
+.fa:hover {
+  color: pink;
+}
+
+.vertical a {
+  margin-bottom: 20px;
+}

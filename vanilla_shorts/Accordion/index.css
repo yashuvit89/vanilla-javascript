@@ -1,0 +1,34 @@
+.accordion {
+  border: 1px solid gray;
+  width: 200px;
+}
+
+.panel-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid grey;
+}
+
+.panel-content {
+  display: none;
+  padding: 10px;
+}
+
+.accordion.active .panel-content {
+  display: block;
+}
+
+.panel-header:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+}
+.active .panel-header:after {
+  content: "\2796"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+}
