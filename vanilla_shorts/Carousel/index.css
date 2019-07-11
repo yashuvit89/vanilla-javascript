@@ -1,0 +1,25 @@
+body {
+  background-color: #efefef;
+}
+
+.images {
+  display: none;
+  /* height: 200px; */
+}
+
+.images.active {
+  display: block;
+}
+
+.imgDot {
+  width: 10px;
+  height: 10px;
+}
+
+.imgDot.active {
+  display: block;
+  background: black;
+}
+
+.imgDots {
+}
