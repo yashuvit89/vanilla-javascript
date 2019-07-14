@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <form id="appForm">
+      <ul class="tabs">
+        <li class="tab active">
+          <a href="#days-of-the-week">Days of the Week</a>
+        </li>
+        <li class="tab"><a href="#date-picker">Date picker</a></li>
+        <li class="tab"><a href="#user-input">User Input</a></li>
+      </ul>
+      <div class="tabContent active" id="days-of-the-week">
+        <input id="MON" name="dayOfWeek" type="checkbox" value="MON" /> Monday
+        <input id="TUE" name="dayOfWeek" type="checkbox" value="TUE" /> Tuesday
+        <input id="WED" name="dayOfWeek" type="checkbox" value="WED" />
+        Wednesday
+        <input id="THU" name="dayOfWeek" type="checkbox" value="THU" /> Thursday
+        <input id="FRI" name="dayOfWeek" type="checkbox" value="FRI" /> Friday
+        <input id="SAT" name="dayOfWeek" type="checkbox" value="SAT" /> Saturday
+        <input id="SUN" name="dayOfWeek" type="checkbox" value="SUN" /> Sunday
+      </div>
+      <div class="tabContent" id="date-picker">
+        <input type="hidden" value="" id="date" />
+        <select id="day"> </select>
+        <select id="month"> </select>
+        <select id="year"> </select>
+      </div>
+      <div class="tabContent" id="user-input">
+        <!-- parse it to fields above -->
+        <input type="text" value="" id="input" />
+      </div>
+
+      <input type="submit" value="Run" id="submit" />
+
+      <!-- final format: MON,TUE,FRI or 05/12/2011 -->
+      <input type="text" value="" id="result" disabled placeholder="Result" />
+    </form>
+  </body>
+</html>
